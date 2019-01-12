@@ -1,6 +1,6 @@
 # T440p - Hackintosh Guide
 
-###Overview
+### Overview
 
 - Not a full in depth guide
 - It is assumed that you have a decent understanding of Hackintosh, the macOS environment, as well as how to do basic computer tasks
@@ -15,8 +15,8 @@
 ![](https://img.shields.io/github/issues/evy0311/t440p.svg) ![](https://img.shields.io/github/forks/evy0311/t440p.svg) ![](https://img.shields.io/github/stars/evy0311/t440p.svg) ![](https://img.shields.io/github/license/evy0311/t440p.svg) ![](https://img.shields.io/twitter/url/https/github.com/evy0311/t440p.svg?style=social) 
 
 
-##Information
-#####What works:
+## Information
+##### What works:
 - Power management/sleep
 - Brightness Control
 - Battery Information
@@ -27,32 +27,32 @@
 - Trackpoint/Touchpad (see below)
 - Pretty much everything accept what is listed below
 
-#####What Doesnt Work:
+##### What Doesnt Work:
 - Audio Jack (as a microphone and as a headphone jack)
 - Trackpad middle scroll button
 
 **Note:** I am currently working on a fix for the items listed above. If you use this guide and information and find that something does not work, please submit an issue request so I can work on a fix.
 
-##Creating the USB Installer
+## Creating the USB Installer
 Currently writing.
 
-##Installing macOS Mojave
+## Installing macOS Mojave
 Currently writing.
 
-##Post-Installation
+## Post-Installation
 Currently Writing.
 
-#####FHD Screen
+##### FHD Screen
 
 If you have done the full HD (1920x1080) screen mod (like myself), it is recommended that you install [One Key HiDPI](https://github.com/xzhih/one-key-hidpi "One Key HiDPI").  This will mimic the "retina" display feature that many of Apple's newer laptops come with. 
 
-#####UltraBay HDD
+##### UltraBay HDD
 
 If you are using a HDD or SSD in place of the normal optical drive, you will need to install AHCIPortInjector.kext and AppleAHCIPort.kext into `Library/Extensions`.
 
 `AHCIPortInjector.kext` fixes the `Disk not initialized` issue (disk cannot be read). `AppleAHCIPort.kext` fixes the disk being detected as an external drive (instead of internal).
 
-#####Customizing About This Mac
+##### Customizing About This Mac
 
 In order to customize the About This Mac section, I recommend you follow the guide [Here](https://github.com/Haru-tan/Hackintosh-Things/blob/master/AboutThisMacMojave.md "Here").
 
