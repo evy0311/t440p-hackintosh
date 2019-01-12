@@ -12,7 +12,7 @@
 
 ![](https://github.com/evy0311/t440p/raw/master/Guide%20Stuff/T440p_Day.png)
 
-![](https://img.shields.io/github/issues/evy0311/t440p.svg) ![](https://img.shields.io/github/forks/evy0311/t440p.svg) ![](https://img.shields.io/github/stars/evy0311/t440p.svg) ![](https://img.shields.io/github/license/evy0311/t440p.svg) ![](https://img.shields.io/twitter/url/https/github.com/evy0311/t440p.svg?style=social) 
+![](https://img.shields.io/github/issues/evy0311/t440p.svg) ![](https://img.shields.io/github/forks/evy0311/t440p.svg) ![](https://img.shields.io/github/stars/evy0311/t440p.svg) ![](https://img.shields.io/github/license/evy0311/t440p.svg) ![](https://img.shields.io/twitter/url/https/github.com/evy0311/t440p.svg?style=social)
 
 
 ## Information
@@ -25,7 +25,7 @@
 - Graphics Acceleration
 - Facetime/iMessage
 - Trackpoint/Touchpad (see below)
-- Pretty much everything accept what is listed below
+- Pretty much everything except what is listed below
 
 ##### What Doesnt Work:
 - Audio Jack (as a microphone and as a headphone jack)
@@ -44,7 +44,7 @@ Currently Writing.
 
 ##### FHD Screen
 
-If you have done the full HD (1920x1080) screen mod (like myself), it is recommended that you install [One Key HiDPI](https://github.com/xzhih/one-key-hidpi "One Key HiDPI").  This will mimic the "retina" display feature that many of Apple's newer laptops come with. 
+If you have done the full HD (1920x1080) screen mod (like myself), it is recommended that you install [One Key HiDPI](https://github.com/xzhih/one-key-hidpi "One Key HiDPI").  This will mimic the "retina" display feature that many of Apple's newer laptops come with.
 
 ##### UltraBay HDD
 
@@ -57,7 +57,3 @@ If you are using a HDD or SSD in place of the normal optical drive, you will nee
 In order to customize the About This Mac section, I recommend you follow the guide [Here](https://github.com/Haru-tan/Hackintosh-Things/blob/master/AboutThisMacMojave.md "Here").
 
 For the section about changing the logo, you can use the T440p logo's I have designed in ` /SystemLogos/`.
-
-
-
-
