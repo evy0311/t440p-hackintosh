@@ -86,3 +86,5 @@ I *highly* recommend following [This guide](https://www.tonymacx86.com/threads/a
 In order to customize the About This Mac section, I recommend you follow the guide [Here](https://github.com/Haru-tan/Hackintosh-Things/blob/master/AboutThisMacMojave.md "Here").
 
 For the section about changing the logo, you can use the T440p logo's I have designed in ` /SystemLogos/`.
+
+## More to come...
