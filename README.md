@@ -43,13 +43,28 @@ Since I don't have access to a legitimate Mac, I needed to be able to create a v
 5. After the .dmg is finished burning to the USB, you can go ahead and eject it from your computer.
 6. Boot to the USB drive and install macOS High Sierra. 
 7. Then, boot into High Sierra. Once you're in, make sure you can connect to the internet. After that, open the App Store and download the upgrade file for "macOS Mojave."
-8. Download Clover bootloader from Here.
-9. Still working on writing...
+8. Download Clover bootloader from [Here](https://bitbucket.org/RehabMan/clover/downloads/). 
+9. **IMPORTANT (DO NOT MISS THIS):** Now, copy Clover bootloader and the kexts files that you have downloaded to another USB drive (not the one you're burning the installer too) or an external hard drive. You will need access to them later.
+10. Copy the `CLOVER` folder you have downloaded from this repository onto your USB drive as well.
+11. I recommend following this guide [Here](https://www.tonymacx86.com/threads/guide-booting-the-os-x-installer-on-laptops-with-clover.148093/) for properly formatting your USB drive and getting it ready for installing the macOS Mojave installer onto it. This guide also walks you through how to download the Mojave installer and writing it to the USB drive as well.
+12. Copy the `CLOVER` folder you have downloaded from this repository into `EFI/`. You can simply copy over the whole folder as the config.plist and everything else is already configured for the T440p. 
+13. The most important step that I missed twice in the guide above is to make sure you add the `HFSPlus.efi` driver into `/EFI/Clover/drivers64UEFI`. I missed this step twice and couldn't see any drivers at all inside of Clover.
+14. We are now ready to continue into the next topic: Installing macOS Mojave.
 
 
 
 ## Installing macOS Mojave
-Currently writing.
+1. After you followed the guide above and have your USB drive ready to go, we can reboot the machine. When you reboot, enter into the BIOS to change some settings. On the T440p, you can do this by hitting `Enter` at the Lenovo boot screen.
+2. Once in the BIOS, make sure you change the following settings. `Disable Security Chip`, `Disable Anti Theft Module`, and `Disable TPM`. Basically, disable all of the "security" features. Make sure Secure boot and other features like that are off. These features will affect how macOS sleeps.
+3. Now, reboot into macOS and select the USB drive inside of Clover.
+4. Boot into macOS and install onto your hard drive. I recommend using an SSD.
+5. After this is done, reboot the computer and let it sit. Mine rebooted a few times on its own to go through some final installation procedures.
+6. Once you see the "region selection" screen, you are good to proceed.
+7. Create your user account and everything else, but do not sign in with your iCloud account. If it asks you to connect to a network, select the option that says do not connect and press continue. We will connect it later.
+8. After you've booted, plug in the USB drive or external hard drive that you copied the Clover file to in step 9 of the previous section. 
+9. Install Clover bootloader following the same steps as before and using the same settings, except this time install them onto your internal hard drive with your Mojave installation. I recommend checking the box that says `Install Clover Configurator` as well (it comes in handy later).
+10. We now need to copy our Clover configuration from our USB to our hard drive with Mojave. Simply copy the `CLOVER` folder that you have on your other USB drive (the one you used in step 9 of the previous section) into the `EFI` partition that Clover should have mounted during install. 
+11. 
 
 ## Post-Installation
 
