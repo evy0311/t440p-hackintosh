@@ -29,27 +29,21 @@
 
 ##### What Doesnt Work:
 - Audio Jack (as a microphone and as a headphone jack)
-- Touchpad middle scroll button (works like a midle click button, but does not allow you to use it to scroll with the Trackpoint)
+- Touchpad middle scroll button (works like a midle click button, but does not allow you to use it to scroll with the Trackpoint). This is likely because (in my case) I do not have a Synaptics trackpad. Your results may differ.
 
 **Note:** I am currently working on a fix for the items listed above. If you use this guide and information and find that something does not work, please submit an issue request so I can work on a fix.
 
 ## Creating the USB Installer
-Since I don't have access to a legitimate Mac, I needed to be able to create a vanilla macOS installer. I highly advise against using "distro" style installer's like the one's from Niresh. Although they may claim to be "vanilla," they never truly will be. However, it is really nice to be able to use them to create a vanilla installer of macOS. It is possible to create the installer from a real Mac, but the steps that follow will be for those that do not have access to an actual Mac.
+Since I don't have access to a legitimate Mac, I needed to be able to create a vanilla macOS installer. This guide (and many others) used to inform users to create a USB installer for a macOS Distro such as Niresh. While this may work just fine for then creating a vanilla macOS installer, distro's can be (and are) very shady. They come preloaded with a bunch of extra junk that is not needed, and just overall are *highly* advised against being used. Follow the steps below to figure out how to create a REAL macOS Mojave Vanilla installer without having access to a real Mac.
 
-1. Download Niresh's distro for macOS High Sierra Here.
-2. Download a copy of TransMac. It has a free, 15-day free trial. You can obtain it Here.
-3. Open TransMac as an administrator. Then, right click on the USB drive you're using, and clean "format disk for Mac". I recommend a USB 2.0 flash drive with a capacity of 32gb or larger.
-4. Then, burn the .dmg file you downloaded from Niresh to a flash drive. You can do this by right clicking on the drive and clicking "Burn disk image for Mac."  
-5. After the .dmg is finished burning to the USB, you can go ahead and eject it from your computer.
-6. Boot to the USB drive and install macOS High Sierra. 
-7. Then, boot into High Sierra. Once you're in, make sure you can connect to the internet. After that, open the App Store and download the upgrade file for "macOS Mojave."
-8. Download Clover bootloader from [Here](https://bitbucket.org/RehabMan/clover/downloads/). 
-9. **IMPORTANT (DO NOT MISS THIS):** Now, copy Clover bootloader and the kexts files that you have downloaded to another USB drive (not the one you're burning the installer too) or an external hard drive. You will need access to them later.
-10. Copy the `CLOVER` folder you have downloaded from this repository onto your USB drive as well.
-11. I recommend following this guide [Here](https://www.tonymacx86.com/threads/guide-booting-the-os-x-installer-on-laptops-with-clover.148093/) for properly formatting your USB drive and getting it ready for installing the macOS Mojave installer onto it. This guide also walks you through how to download the Mojave installer and writing it to the USB drive as well.
-12. Copy the `CLOVER` folder you have downloaded from this repository into `EFI/`. You can simply copy over the whole folder as the config.plist and everything else is already configured for the T440p. 
-13. The most important step that I missed twice in the guide above is to make sure you add the `HFSPlus.efi` driver into `/EFI/Clover/drivers64UEFI`. I missed this step twice and couldn't see any drivers at all inside of Clover.
-14. We are now ready to continue into the next topic: Installing macOS Mojave.
+1. Follow the steps at this guide [Here](https://internet-install.gitbook.io/macos-internet-install/).
+2. When you get to the part about installing clover bootloader, follow the steps below for configuring kexts, etc. 
+3. **IMPORTANT (DO NOT MISS THIS):** Now, copy Clover bootloader and the kexts files that you have downloaded to another USB drive (not the one you're burning the installer too) or an external hard drive. You will need access to them later.
+4. Copy the `CLOVER` folder you have downloaded from this repository onto your USB drive as well.
+5. Copy the `CLOVER` folder you have downloaded from this repository into `EFI/`. You can simply copy over the whole folder as the config.plist and everything else is already configured for the T440p. 
+6. The most important step that I missed twice in the guide above is to make sure you add the `HFSPlus.efi` driver into `/EFI/Clover/drivers64UEFI`. I missed this step twice and couldn't see any drivers at all inside of Clover.
+7. For more help on configuring Clover and the USB installer, the original guide linked in step 1 will be of the most help to you. Make sure you install the kexts and `CLOVER` folder from this repo onto your Clover USB, as these will guarantee your T440p will work properly.
+8. We are now ready to continue into the next topic: Installing macOS Mojave.
 
 
 
