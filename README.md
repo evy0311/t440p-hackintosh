@@ -81,4 +81,8 @@ In order to customize the About This Mac section, I recommend you follow the gui
 
 For the section about changing the logo, you can use the T440p logo's I have designed in ` /SystemLogos/`.
 
+##### Fix Middle Button Scrolling with Non-Synaptics Trackpad
+
+Since Apple only uses Synaptics trackpads in their Macbook's, a non-synaptics trackpad will have problems getting things like gestures to work, as well as the popular "middle button scrolling" used on Thinkpads (combination of pressing the middle button and using the Trackpoint to scroll). If you're like me, I ordered the Alps varient of the upgraded T450 trackpad, which the VoodooPS2Controller kext does not support gestures for. In order to "fake" the middle button scrolling, we need to download an app called [Smart Scroll](http://www.marcmoini.com/sx_en.html). Once this is done, go to the "vector scroll" section, and enable it. Then, if you clikc the middle button, you can now scroll down by using the trackpoint. This is unfortunetely only a temporary solution as it doesn't behave the same. Thanks to Redit user [daftguy](https://www.reddit.com/user/daftguy) for finding this solution. 
+
 ## More to come...
