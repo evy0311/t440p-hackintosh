@@ -83,15 +83,11 @@ In order to get audio to work, there are a few simple steps we need to follow. T
 2. Open terminal and type `cd desktop/alc_fix`, then hit enter.
 3. Then, type `./install.sh` and press enter.
 4. Then, mount your EFI partition using Clover Configurator.
-5. Open the EFI partition and navigate to `/EFI/CLOVER/ACPI/patched`.
-6. Delete the file inside that folder called `SSDT-T440P.aml`.
-7. Copy the new `SSDT-T440P.aml` file you downloaded into the folder.
-8. Copy the three .kext files from the `kexts` folder inside of `Audio Stuff` to `/EFI/CLOVER/kexts/Other`.
-9. Open up Clover Configurator again and open your `config.plist` file.
-10. Click `Devices`, then look for the section labeled `Audio`.
-11. Where it says `Inject`, type `28` into the box. 
-12. Save the `config.plist` file.
-13. Restart and enjoy your audio from the headphone jack!
+8. Open your `config.plist` file.
+9. Click `Devices`, then look for the section labeled `Audio`.
+10. Where it says `Inject`, type `28` into the box. 
+11. Save the `config.plist` file.
+12. Restart and enjoy your audio from the headphone jack!
 
 ##### Customizing About This Mac
 
