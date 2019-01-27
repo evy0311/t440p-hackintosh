@@ -20,7 +20,7 @@
 - Power management/sleep
 - Brightness Control
 - Battery Information
-- Speaker Audio
+- Audio (from internal speaker and headphone jack)
 - USB Ports
 - Graphics Acceleration
 - Facetime/iMessage
@@ -28,8 +28,7 @@
 - Pretty much everything except what is listed below
 
 ##### What Doesnt Work:
-- Audio Jack (as a microphone and as a headphone jack)
-- Touchpad middle scroll button (works like a midle click button, but does not allow you to use it to scroll with the Trackpoint). This is likely because (in my case) I do not have a Synaptics trackpad. Your results may differ.
+- As of right now, nothing! :)
 
 **Note:** I am currently working on a fix for the items listed above. If you use this guide and information and find that something does not work, please submit an issue request so I can work on a fix.
 
@@ -74,6 +73,25 @@ If you are using a HDD or SSD in place of the normal optical drive, you will nee
 
 ##### Setting up Apple services (Facetime, iMessage, etc.)
 I *highly* recommend following [This guide](https://www.tonymacx86.com/threads/an-idiots-guide-to-imessage.196827/) to get these features working. It worked for me on the first try and was super straight forward compared to other guides that I have seen before in the past. 
+
+##### Getting audio working
+
+In order to get audio to work, there are a few simple steps we need to follow. This has been tested and working on High Sierra and Mojave. Special Thanks to this guide [Here](https://www.tonymacx86.com/threads/guide-lenovo-thinkpad-t440p.233282/) for help in getting this to work. By default, speaker audio should work, but audio via the headhpone jack does not. Follow the steps below to get it working.
+
+
+1. First, copy the .zip file called `alc_fix.zip` inside the foldr `Audio Stuff` to the desktop.
+2. Open terminal and type `cd desktop/alc_fix`, then hit enter.
+3. Then, type `./install.sh` and press enter.
+4. Then, mount your EFI partition using Clover Configurator.
+5. Open the EFI partition and navigate to `/EFI/CLOVER/ACPI/patched`.
+6. Delete the file inside that folder called `SSDT-T440P.aml`.
+7. Copy the new `SSDT-T440P.aml` file you downloaded into the folder.
+8. Copy the three .kext files from the `kexts` folder inside of `Audio Stuff` to `/EFI/CLOVER/kexts/Other`.
+9. Open up Clover Configurator again and open your `config.plist` file.
+10. Click `Devices`, then look for the section labeled `Audio`.
+11. Where it says `Inject`, type `28` into the box. 
+12. Save the `config.plist` file.
+13. Restart and enjoy your audio from the headphone jack!
 
 ##### Customizing About This Mac
 
