@@ -27,11 +27,6 @@
 - Trackpoint/Touchpad (see below)
 - Pretty much everything except what is listed below
 
-##### What Doesnt Work:
-- As of right now, nothing! :)
-
-**Note:** I am currently working on a fix for the items listed above. If you use this guide and information and find that something does not work, please submit an issue request so I can work on a fix.
-
 ## Creating the USB Installer
 Since I don't have access to a legitimate Mac, I needed to be able to create a vanilla macOS installer. This guide (and many others) used to inform users to create a USB installer for a macOS Distro such as Niresh. While this may work just fine for then creating a vanilla macOS installer, distro's can be (and are) very shady. They come preloaded with a bunch of extra junk that is not needed, and just overall are *highly* advised against being used. Follow the steps below to figure out how to create a REAL macOS Mojave Vanilla installer without having access to a real Mac.
 
@@ -57,7 +52,6 @@ Since I don't have access to a legitimate Mac, I needed to be able to create a v
 8. After you've booted, plug in the USB drive or external hard drive that you copied the Clover file to in step 9 of the previous section. 
 9. Install Clover bootloader following the same steps as before and using the same settings, except this time install them onto your internal hard drive with your Mojave installation. I recommend checking the box that says `Install Clover Configurator` as well (it comes in handy later).
 10. We now need to copy our Clover configuration from our USB to our hard drive with Mojave. Simply copy the `CLOVER` folder that you have on your other USB drive (the one you used in step 9 of the previous section) into the `EFI` partition that Clover should have mounted during install. 
-11. 
 
 ## Post-Installation
 
@@ -82,12 +76,8 @@ In order to get audio to work, there are a few simple steps we need to follow. T
 1. First, copy the .zip file called `alc_fix.zip` inside the foldr `Audio Stuff` to the desktop.
 2. Open terminal and type `cd desktop/alc_fix`, then hit enter.
 3. Then, type `./install.sh` and press enter.
-4. Then, mount your EFI partition using Clover Configurator.
-8. Open your `config.plist` file.
-9. Click `Devices`, then look for the section labeled `Audio`.
-10. Where it says `Inject`, type `28` into the box. 
-11. Save the `config.plist` file.
-12. Restart and enjoy your audio from the headphone jack!
+4. The provided `config.plist` has already been configured to inject *Audio Layout* ID `28`. This enables the headphone jack to work.
+5. Restart and enjoy your audio from the headphone jack!
 
 ##### Customizing About This Mac
 
