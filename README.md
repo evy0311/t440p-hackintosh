@@ -25,7 +25,8 @@
 - Graphics Acceleration
 - Facetime/iMessage
 - Trackpoint/Touchpad (see below)
-- Pretty much everything except what is listed below
+- WiFi and Bluetooth (with WiFi card and BIOS mod)
+- Handoff and Airdrop, other Apple features (using WiFi card and BIOS mod)
 
 ## Creating the USB Installer
 Since I don't have access to a legitimate Mac, I needed to be able to create a vanilla macOS installer. This guide (and many others) used to inform users to create a USB installer for a macOS Distro such as Niresh. While this may work just fine for then creating a vanilla macOS installer, distro's can be (and are) very shady. They come preloaded with a bunch of extra junk that is not needed, and just overall are *highly* advised against being used. Follow the steps below to figure out how to create a REAL macOS Mojave Vanilla installer without having access to a real Mac.
