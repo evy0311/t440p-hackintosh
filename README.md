@@ -10,7 +10,7 @@
 
 # Guide
 
-![](https://github.com/evy0311/t440p/raw/master/Guide%20Stuff/T440p_Day.png)
+![](https://github.com/evy0311/t440p-hackintosh/raw/master/aboutthismac.png)
 
 ![](https://img.shields.io/github/issues/evy0311/t440p.svg) ![](https://img.shields.io/github/forks/evy0311/t440p.svg) ![](https://img.shields.io/github/stars/evy0311/t440p.svg) ![](https://img.shields.io/github/license/evy0311/t440p.svg) ![](https://img.shields.io/twitter/url/https/github.com/evy0311/t440p.svg?style=social)
 
@@ -28,8 +28,11 @@
 - WiFi and Bluetooth (with WiFi card and BIOS mod)
 - Handoff and Airdrop, other Apple features (using WiFi card and BIOS mod)
 
+##### What doesn't work:
+- Occasionally after waking from sleep, the laptop reboots. I have heard of some even on real Macbooks having similar issues. I am looking into what is causing this and will update the guide soon. 
+
 ## Creating the USB Installer
-Since I don't have access to a legitimate Mac, I needed to be able to create a vanilla macOS installer. This guide (and many others) used to inform users to create a USB installer for a macOS Distro such as Niresh. While this may work just fine for then creating a vanilla macOS installer, distro's can be (and are) very shady. They come preloaded with a bunch of extra junk that is not needed, and just overall are *highly* advised against being used. Follow the steps below to figure out how to create a REAL macOS Mojave Vanilla installer without having access to a real Mac.
+Since I don't have access to a legitimate Mac, I needed to be able to create a vanilla macOS installer. This guide (and many others) used to inform users to create a USB installer for a macOS Distro such as Niresh. While this may work just fine for then creating a vanilla macOS installer, distro's can be (and are) very shady. They come preloaded with a bunch of extra junk that is not needed, and just overall are *highly* advised against being used. Follow the steps below to figure out how to create a REAL macOS Catalina Vanilla installer without having access to a real Mac.
 
 1. Follow the steps at this guide [Here](https://internet-install.gitbook.io/macos-internet-install/).
 2. When you get to the part about installing clover bootloader, follow the steps below for configuring kexts, etc. 
@@ -38,11 +41,11 @@ Since I don't have access to a legitimate Mac, I needed to be able to create a v
 5. Copy the `CLOVER` folder you have downloaded from this repository into `EFI/`. You can simply copy over the whole folder as the config.plist and everything else is already configured for the T440p. 
 6. The most important step that I missed twice in the guide above is to make sure you add the `HFSPlus.efi` driver into `/EFI/Clover/drivers64UEFI`. I missed this step twice and couldn't see any drivers at all inside of Clover.
 7. For more help on configuring Clover and the USB installer, the original guide linked in step 1 will be of the most help to you. Make sure you install the kexts and `CLOVER` folder from this repo onto your Clover USB, as these will guarantee your T440p will work properly.
-8. We are now ready to continue into the next topic: Installing macOS Mojave.
+8. We are now ready to continue into the next topic: Installing macOS Catalina.
 
 
 
-## Installing macOS Mojave
+## Installing macOS Catalina
 1. After you followed the guide above and have your USB drive ready to go, we can reboot the machine. When you reboot, enter into the BIOS to change some settings. On the T440p, you can do this by hitting `Enter` at the Lenovo boot screen.
 2. Once in the BIOS, make sure you change the following settings. `Disable Security Chip`, `Disable Anti Theft Module`, and `Disable TPM`. Basically, disable all of the "security" features. Make sure Secure boot and other features like that are off. These features will affect how macOS sleeps.
 3. Now, reboot into macOS and select the USB drive inside of Clover.
@@ -51,8 +54,8 @@ Since I don't have access to a legitimate Mac, I needed to be able to create a v
 6. Once you see the "region selection" screen, you are good to proceed.
 7. Create your user account and everything else, but do not sign in with your iCloud account. If it asks you to connect to a network, select the option that says do not connect and press continue. We will connect it later.
 8. After you've booted, plug in the USB drive or external hard drive that you copied the Clover file to in step 9 of the previous section. 
-9. Install Clover bootloader following the same steps as before and using the same settings, except this time install them onto your internal hard drive with your Mojave installation. I recommend checking the box that says `Install Clover Configurator` as well (it comes in handy later).
-10. We now need to copy our Clover configuration from our USB to our hard drive with Mojave. Simply copy the `CLOVER` folder that you have on your other USB drive (the one you used in step 9 of the previous section) into the `EFI` partition that Clover should have mounted during install. 
+9. Install Clover bootloader following the same steps as before and using the same settings, except this time install them onto your internal hard drive with your Catalina installation. I recommend checking the box that says `Install Clover Configurator` as well (it comes in handy later).
+10. We now need to copy our Clover configuration from our USB to our hard drive with Catalina. Simply copy the `CLOVER` folder that you have on your other USB drive (the one you used in step 9 of the previous section) into the `EFI` partition that Clover should have mounted during install. 
 
 ## Post-Installation
 
@@ -71,7 +74,7 @@ I *highly* recommend following [This guide](https://www.tonymacx86.com/threads/a
 
 ##### Getting audio working
 
-In order to get audio to work, there are a few simple steps we need to follow. This has been tested and working on High Sierra and Mojave. Special Thanks to this guide [Here](https://www.tonymacx86.com/threads/guide-lenovo-thinkpad-t440p.233282/) for help in getting this to work. By default, speaker audio should work, but audio via the headhpone jack does not. Follow the steps below to get it working.
+In order to get audio to work, there are a few simple steps we need to follow. This has been tested and working on High Sierra and Catalina. Special Thanks to this guide [Here](https://www.tonymacx86.com/threads/guide-lenovo-thinkpad-t440p.233282/) for help in getting this to work. By default, speaker audio should work, but audio via the headhpone jack does not. Follow the steps below to get it working.
 
 
 1. First, copy the .zip file called `alc_fix.zip` inside the foldr `Audio Stuff` to the desktop.
