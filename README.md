@@ -29,7 +29,7 @@
 - Handoff and Airdrop, other Apple features (using WiFi card and BIOS mod)
 
 ##### What doesn't work:
-- Occasionally after waking from sleep, the laptop reboots. I have heard of some even on real Macbooks having similar issues. I am looking into what is causing this and will update the guide soon. 
+- There is currently a bug in the latest versions of the AppleALC kext that cause reboots after waking from sleep. While waiting for a fix on this, I have temporarily rolled back the kext to version to 1.2.8. This shouldn't appear any different to you, but at this time do not update this kext until a fix is released. 
 
 ## Creating the USB Installer
 Since I don't have access to a legitimate Mac, I needed to be able to create a vanilla macOS installer. This guide (and many others) used to inform users to create a USB installer for a macOS Distro such as Niresh. While this may work just fine for then creating a vanilla macOS installer, distro's can be (and are) very shady. They come preloaded with a bunch of extra junk that is not needed, and just overall are *highly* advised against being used. Follow the steps below to figure out how to create a REAL macOS Catalina Vanilla installer without having access to a real Mac.
