@@ -4,7 +4,7 @@
 
 - This guide references a few other guides. Credit for those guides is given to their respective owners.
 - It is assumed that you have a decent understanding of Hackintosh, the macOS environment, as well as how to do basic computer tasks.
-- Will guide you through some of the different information needed to get macOS Catalina 10.15.2 working on your Thinkpad T440p. I have recently updated this guide for support for Catalina and as such, the new kexts are not backwards compatible with older versions of macOS. If you would like help installing an older version, please open an issue o nthis repo. 
+- Will guide you through some of the different information needed to get macOS Catalina 10.15.2 working on your Thinkpad T440p. I have recently updated this guide for support for Catalina and as such, the new kexts are not backwards compatible with older versions of macOS. If you would like help installing an older version, please open an issue on this repo. 
 - Special thanks to [midi1996](https://github.com/midi1996) on GitHub for his guide on how to create the macOS installer from Recovery.
 - **Note:** I am NOT responsible for any harm you cause to your device. This guide is provided "as-is" and all steps taken are done at your own risk.
 
@@ -23,13 +23,15 @@
 - Audio (from internal speaker and headphone jack)
 - USB Ports
 - Graphics Acceleration
-- Facetime/iMessage
+- FaceTime/iMessage
 - Trackpoint/Touchpad (see below)
-- WiFi and Bluetooth (with WiFi card and BIOS mod)
-- Handoff and Airdrop, other Apple features (using WiFi card and BIOS mod)
+- WiFi and Bluetooth, Handoff and AirDrop, other Apple features (with WiFi card and BIOS mod, see below)
 
 ##### What doesn't work:
-- There is currently a bug in the latest versions of the AppleALC kext that cause reboots after waking from sleep. While waiting for a fix on this, I have temporarily rolled back the kext to version to 1.2.8. This shouldn't appear any different to you, but at this time do not update this kext until a fix is released. 
+- There is currently a bug in the latest versions of the AppleALC kext that cause reboots after waking from sleep. While waiting for a fix on this, I have temporarily rolled back the kext to version 1.2.8. This shouldn't appear any different to you, but at this time do not update this kext until a fix is released. 
+
+##### WiFi/Bluetooth Card and BIOS Mod:
+If you wish to have native features such as WiFi, Bluetooth, Handoff, AirDrop, etc. working on your hackintosh, you will need to use a supported card. I have opted to use the [DW1560 BCM94352Z](https://www.aliexpress.com/item/32487923741.html?spm=a2g0s.9042311.0.0.77264c4dIes6Qw) card. I have had no issues with this card and all Apple features work without using issue using the files from this guide. You will also need to have a modded BIOS in order for your T440p to accept the card. I had my BIOS modded in this thread [here](https://www.techinferno.com/index.php?/forums/topic/12229-lenovo-thinkpad-t440p-t440s-t540-unlocked-bios-menu-wlan-wi-fi-whitelist-mod/). Follow all of the information in the beginning of that thread in order to receive help. If you have questions or need help getting yours working, feel free to open an issue so we can resolve it!
 
 ## Creating the USB Installer
 Since I don't have access to a legitimate Mac, I needed to be able to create a vanilla macOS installer. This guide (and many others) used to inform users to create a USB installer for a macOS Distro such as Niresh. While this may work just fine for then creating a vanilla macOS installer, distro's can be (and are) very shady. They come preloaded with a bunch of extra junk that is not needed, and just overall are *highly* advised against being used. Follow the steps below to figure out how to create a REAL macOS Catalina Vanilla installer without having access to a real Mac.
@@ -92,5 +94,3 @@ For the section about changing the logo, you can use the T440p logo's I have des
 ##### Fix Middle Button Scrolling with Non-Synaptics Trackpad
 
 Since Apple only uses Synaptics trackpads in their Macbook's, a non-synaptics trackpad will have problems getting things like gestures to work, as well as the popular "middle button scrolling" used on Thinkpads (combination of pressing the middle button and using the Trackpoint to scroll). If you're like me, I ordered the Alps varient of the upgraded T450 trackpad, which the VoodooPS2Controller kext does not support gestures for. In order to "fake" the middle button scrolling, we need to download an app called [Smart Scroll](http://www.marcmoini.com/sx_en.html). Once this is done, go to the "vector scroll" section, and enable it. Then, if you clikc the middle button, you can now scroll down by using the trackpoint. This is unfortunetely only a temporary solution as it doesn't behave the same. Thanks to Redit user [daftguy](https://www.reddit.com/user/daftguy) for finding this solution. 
-
-## More to come...
