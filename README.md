@@ -1,10 +1,10 @@
-# T440p - Hackintosh Catalina (10.15.2) Guide
+# T440p - Hackintosh Catalina (10.15.4) Guide
 
 ### Overview
 
 - This guide references a few other guides. Credit for those guides is given to their respective owners.
 - It is assumed that you have a decent understanding of Hackintosh, the macOS environment, as well as how to do basic computer tasks.
-- Will guide you through some of the different information needed to get macOS Catalina 10.15.2 working on your Thinkpad T440p. I have recently updated this guide for support for Catalina and as such, the new kexts are not backwards compatible with older versions of macOS. If you would like help installing an older version, please open an issue on this repo. 
+- Will guide you through some of the different information needed to get macOS Catalina 10.15.4 working on your Thinkpad T440p. I have recently updated this guide for support for Catalina and as such, the new kexts are not backwards compatible with older versions of macOS. If you would like help installing an older version, please open an issue on this repo. 
 - Special thanks to [midi1996](https://github.com/midi1996) on GitHub for his guide on how to create the macOS installer from Recovery.
 - **Note:** I am NOT responsible for any harm you cause to your device. This guide is provided "as-is" and all steps taken are done at your own risk.
 
